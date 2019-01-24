@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title REST API
+    link(rel="stylesheet", href="/static/css/app.css")
+  body
+    div.left
+      ul
+        li
+          a(href="http://localhost:3000/docs/books/list") Get /books
+        li
+          a(href="http://localhost:3000/docs/books/item") GET /books/:id
+        li
+          a(href="http://localhost:3000/docs/products/list") GET /products
+        li
+          a(href="http://localhost:3000/docs/products/item") GET /products/:id
+    div.center
+      h3=title_api
+      h3 Documentation from REST API
+      div.endpoint
+        h2  products
+        h4  https://api.myownfancyproject.com/products
+      div.container
+        h3 Objective
+        p Obtain the list of all product
+      div.container
+        h3 Request
+        p You can retrieve a listing of all products by sending an HTTP GET request to the URI with the following format:
+        p.example https://api.myownfancyproject.com/products
+      div.container
+        h3 Response
+        p=JSON.stringify(products)
